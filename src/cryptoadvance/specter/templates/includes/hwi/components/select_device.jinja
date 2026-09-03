@@ -152,7 +152,7 @@
         }
 
         if (fingerprint && device.fingerprint != fingerprint) {
-            handleHWIError(`{{ _("Selected device does not have matching signing key.") }}`);
+            showError(`{{ _("Selected device does not have matching signing key.") }}`);
             return;
         }
         showHWIProgress(`{{ _("Signing message...") }}`, `{{ _("Confirm on your") }} ${capitalize(device.type)}.`);
